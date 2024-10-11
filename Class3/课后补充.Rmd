@@ -1,0 +1,65 @@
+# 课上总结
+
+-   if else的基本使用、连续的多分支使用（成绩评级，if() {}else if(){} else if(){}... ）
+
+-   if else的嵌套使用（if、else中可继续嵌套，适合复杂情况if(){if()...}
+
+-   repeat、while、for的基本使用（注意while的终止条件，for循环的遍历元素的写法）
+
+    -   **当且仅当**在循环中，才能使用分支结构的next和break
+
+-   判断奇偶x%%2
+
+-   **函数**
+
+    -   基本思想：提高代码复用性，强调程序模块化、封装性，提高代码可读性
+
+    -   函数的默认参数
+
+        ``` r
+        max_3 <- function(a, b, c=0) { # 默认c=0
+
+            if(a > b){
+                t <- a
+            }else{
+                t <- b
+            }
+            if(t > c){
+                return(t)
+            }else{
+                return(c)
+            }
+        }
+        max_3(11,22) #调用时不写出，那么默认c=0
+        ```
+
+    -   fun+TAB可快速写出函数模板
+
+        ``` r
+        max_value <- function(vec) {
+            # vec变量仅在函数内部可用
+            res <- 0
+            for (a in vec) {
+                if(a^2 > res^2 ){
+                    res = a
+                }
+                # print(a)
+            }
+            return(res) #函数必须有return，这是一个函数结束的标志，当需要打印才用print
+        }
+        ages <- c(12, 23,33,11)
+        # 指定参数名称调用：
+        max_value(vec = ages)
+        # 也可之间调用
+        max_value(ages)
+        ```
+
+    ``` R
+    # R语言使用命令行进行交互输入
+    user_input <- readline(prompt = "请输入一些文本：")
+    user_integer <- as.integer(readline(prompt = "请输入一个整数："))
+    user_numbers <- strsplit(readline(prompt = "请输入一些数字，用空格分隔："), " ")[[1]]
+    user_numbers <- as.numeric(user_numbers)
+    ```
+
+# 课后作业
