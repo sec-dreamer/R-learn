@@ -111,5 +111,3 @@ rm(vec)
 
 max_value("abc")
 
-
-
