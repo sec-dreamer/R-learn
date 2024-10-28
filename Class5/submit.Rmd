@@ -1,0 +1,22 @@
+# Question 2
+
+```{r}
+Mean_Uniform_Histogram <- function(times_sample, num_samples, lambda) {
+    set.seed(1234)
+    means <- rep(0, times=times_sample)
+    
+    for (i in 1:times_sample) {
+        sample <- rexp(num_samples, rate = lambda)
+        means[i] <- mean(sample)
+    }
+    
+    hist(means, xlab = "Means", breaks = 10, col = "lightblue")
+
+
+}
+par(mfrow=c(1, 1))
+
+Mean_Uniform_Histogram(times_sample = 10, num_samples = 100, lambda = 3)
+Mean_Uniform_Histogram(times_sample = 10, num_samples = 100, lambda = 3)
+Mean_Uniform_Histogram(times_sample = 10, num_samples = 100, lambda = 3)
+```
